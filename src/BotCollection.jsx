@@ -6,12 +6,12 @@ import './App.css'
 const BotCollection = () => {
   const [bots, setBots] = useState([]);
   const [botArmy, setBotArmy] = useState([]);
-  const [sortCriteria, setSortCriteria] = useState('health'); // Default sort criteria
-  const [filteredClass, setFilteredClass] = useState(''); // State for filtering by class
+  const [sortCriteria, setSortCriteria] = useState('health'); // sort criteria
+  const [filteredClass, setFilteredClass] = useState(''); // State for filtering by the class
 
-  // Fetch bots from the JSON server
+  // it fetch bots from the JSON server
   useEffect(() => {
-    fetch('https://bots-si0g.onrender.com/bots')  // Keeping your original fetch URL
+    fetch('https://bots-si0g.onrender.com/bots')  
       .then((response) => response.json())
       .then((data) => setBots(data));
   }, []);
@@ -23,10 +23,10 @@ const BotCollection = () => {
 
   // Handle class filter change
   const handleClassFilterChange = (selectedClass) => {
-    setFilteredClass(selectedClass); // Update filtered class
+    setFilteredClass(selectedClass); // Update 
   };
 
-  // Sort the bots based on the selected criteria
+  // Sort the bots selected criteria
   const sortedBots = bots.sort((a, b) => {
     if (a[sortCriteria] < b[sortCriteria]) return -1;
     if (a[sortCriteria] > b[sortCriteria]) return 1;
@@ -35,11 +35,11 @@ const BotCollection = () => {
 
   // Filter the bots based on the selected class
   const filteredBots = sortedBots.filter((bot) => {
-    if (filteredClass === '') return true; // Show all bots if no class is selected
+    if (filteredClass === '') return true; 
     return bot.bot_class === filteredClass;
   });
 
-  // Enlist a bot into the army
+  // Enlist(places) a bot into the army
   const handleEnlist = (bot) => {
     if (botArmy.find((b) => b.id === bot.id)) {
       alert(`${bot.name} is already in your army.`);
@@ -48,14 +48,14 @@ const BotCollection = () => {
     setBotArmy([...botArmy, bot]);
   };
 
-  // Release a bot from the army
+  // Release a bot 
   const handleRelease = (bot) => {
     setBotArmy(botArmy.filter((b) => b.id !== bot.id));
   };
 
-  // Discharge a bot (delete from backend)
+  // Discharge a bot 
   const handleDischarge = (bot) => {
-    // Remove bot from the army
+    // Remove bot 
     setBotArmy(botArmy.filter((b) => b.id !== bot.id));
 
 // Delete bot from the server
@@ -68,7 +68,6 @@ fetch(`https://bots-si0g.onrender.com/bots/${bot.id}`, {
 
   return (
     <div className="container">
-      {/* Sort Bar should be at the top */}
       <SortBar
         onSortChange={handleSortChange}
         onClassFilterChange={handleClassFilterChange} // Pass filter handler to SortBar

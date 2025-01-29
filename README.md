@@ -41,7 +41,6 @@ The application fetches bot data from: "https://bots-si0g.onrender.com/bots"
 ## Components Breakdown
 
 1. App.jsx
-
 Manages the main state of the application, including the list of bots and the user's army.
 Fetches bot data from the API on mount.
 Contains functions to enlist, release, and delete bots.

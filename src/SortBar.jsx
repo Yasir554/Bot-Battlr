@@ -7,7 +7,7 @@ const SortBar = ({ onSortChange, onClassFilterChange }) => {
   const handleClassChange = (event) => {
     const selectedClass = event.target.value;
     setSelectedClass(selectedClass);
-    onClassFilterChange(selectedClass); // Pass selected class to the parent component
+    onClassFilterChange(selectedClass); // Pass Choosed class to the parent component
   };
 
   const handleSortChange = (event) => {

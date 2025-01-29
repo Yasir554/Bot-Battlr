@@ -7,7 +7,7 @@ function App() {
   const [bots, setBots] = useState([]);
   const [army, setArmy] = useState([]);
 
-  // Fetch bots on component mount
+  // Fetch bots on component 
   useEffect(() => {
     fetch('https://bots-si0g.onrender.com/bots')
       .then((response) => {
