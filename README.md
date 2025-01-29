@@ -66,3 +66,4 @@ Enlist a Bot: Adds a bot to the army if no other bot of the same class exists.
 Release a Bot: Removes a bot from the army without affecting the collection.
 Delete a Bot: Removes a bot from both the army and the server permanently.
 
+### Happy Coding

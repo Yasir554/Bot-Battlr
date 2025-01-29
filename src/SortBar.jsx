@@ -38,3 +38,5 @@ const SortBar = ({ onSortChange, onClassFilterChange }) => {
 };
 
 export default SortBar;
+
+/* Happy Coding */

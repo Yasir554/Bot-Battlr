@@ -15,3 +15,5 @@ const BotCard = ({ bot, onEnlist }) => {
 };
 
 export default BotCard;
+
+/* Happy Coding */

@@ -101,10 +101,4 @@ fetch(`https://bots-si0g.onrender.com/bots/${bot.id}`, {
 export default BotCollection;
 
 
-
-
-
-
-
-
-
+/* Happy Coding */
