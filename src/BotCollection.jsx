@@ -86,7 +86,7 @@ fetch(`https://bots-si0g.onrender.com/bots/${bot.id}`, {
     <div className="bot-army">
       {botArmy.map((bot) => (
         <div key={bot.id} className="bot-card">
-          <img src={bot.avatar_url} alt={bot.name} />
+          <img src={bot.avatar_url} alt={bot.name} className="image"/>
           <h3>{bot.name}</h3>
           <p>{bot.bot_class}</p>
           <button onClick={() => handleRelease(bot)}>Release</button>
